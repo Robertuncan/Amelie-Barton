@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: #4c1d95;
+    --color-primary-hover: #3b0764;
+    --color-primary-light: #6d28d9;
+    --color-primary-subtle: #f5f3ff;
+    --color-secondary: #ffffff;
+    --color-ink: #140e21;
+    --color-ink-muted: #534d66;
+    --color-ink-faint: #8e87a3;
+    --color-bg: #fcfbf9;
+    --color-bg-alt: #f6f4ee;
+    --color-surface: #ffffff;
+    --color-border: rgba(76, 29, 149, 0.12);
+    --color-border-subtle: rgba(20, 14, 33, 0.08);
+    --font-heading: "Fraunces", Georgia, serif;
+    --font-body: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --navbar-height: 80px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    line-height: 1.65;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-ink);
+    letter-spacing: -0.025em;
+  }
+
+  /* Custom scrollbar for modern browsers */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg-alt);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #d8d4cf;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a8a29e;
+  }
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Luxury Grain & Texture Overlay */
+.bg-grain-pattern {
+  background-image: radial-gradient(rgba(20, 14, 33, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-grid-minimal {
+  background-size: 32px 32px;
+  background-image: linear-gradient(to right, rgba(20, 14, 33, 0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(20, 14, 33, 0.03) 1px, transparent 1px);
+}
+
+.bg-linen-pattern {
+  background-image: radial-gradient(circle at 50% 50%, rgba(76, 29, 149, 0.03) 0%, transparent 60%);
+}
